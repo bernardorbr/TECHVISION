@@ -1,2 +1,0 @@
-# TECHVISION
-Site da Techvision
