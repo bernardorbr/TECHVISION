@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TECHVISION</title>
+    <title>TECHVISION - Monte sua solução</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header>
       <h1>Monte Sua Solução!</h1>
     </header>
-
+      <nav aria-label="Navegação">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+      </nav>
     <main>
-      <section>
+      <section class="informacao">
         <p>
           Não sabe qual produto ou serviço escolher? Responda algumas perguntas
-          e monte a solução ideial para você com a TechVision!
+          e monte a solução ideal para você com a TechVision!
         </p>
 
         <form>
@@ -44,7 +48,7 @@
               <option value="informatica">Informática</option>
               <option value="tecnologia">Tecnologia</option>
               <option value="acessorios">Acessórios</option>
-              <option value="manutenção">Menutençãp</option>
+              <option value="manutenção">Menutenção</option>
             </select>
 
             <br /><br />
@@ -60,14 +64,15 @@
             <br /><br />
 
             <label for="preferencia"
-              >Conte um ouco mais sobre o que você procura:</label
+              >Conte um puco mais sobre o que você procura:</label
             ><br />
             <textarea
               name="preferencia"
               id="preferencia"
               rows="5"
               cols="40"
-              placeholder="Ex: Quero algo para melhorar meu computadors..."
+              placeholder="Ex: Quero algo para melhorar meu computador..."
+              required
             ></textarea>
 
             <br /><br />
@@ -80,9 +85,7 @@
     </main>
 
     <footer>
-      <nav aria-label="Navegação">
-        <a href="index.html">Início</a>
-      </nav>
+    <p>&copy; 2026 TechVision</p>
     </footer>
   </body>
 </html>

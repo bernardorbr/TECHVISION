@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ouvidoria - TechVision</title>
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <header>
       <h1>Ouvidoria</h1>
     </header>
-
+      <nav aria-label="Navegação">
+        <a href="index.html">Início</a>
+      </nav>
     <main>
-      <section>
+      <section class="informacao">
         <p>
-          Sua opnião é importante para a TechVision. Envie sua sugestão,
+          Sua opinião é importante para a TechVision. Envie sua sugestão,
           reclamação, elogio ou dúvida.
         </p>
 
@@ -37,7 +40,7 @@
               <option value="sugestão">Sugestão</option>
               <option value="reclamação">Reclamação</option>
               <option value="elogio">Elogio</option>
-              <option value="duvida">Dúviida</option>
+              <option value="duvida">Dúvida</option>
             </select>
 
             <br /><br />
@@ -49,6 +52,7 @@
               rows="6"
               cols="40"
               placeholder="Digite sua mensagem..."
+              required
             ></textarea>
 
             <br /><br />
@@ -61,9 +65,7 @@
     </main>
 
     <footer>
-      <nav aria-label="Navegação">
-        <a href="index.html">Início</a>
-      </nav>
+      <p>&copy; 2026 TechVision</p>
     </footer>
   </body>
 </html>
