@@ -252,11 +252,47 @@ button:hover {
     background-color: #172554;
 }
 
+.barra-lateral {
+    position: fixed;
+    top: 190px;
+    left: 10px;
+
+    width: 200px;
+    background-color: #04248d;
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.barra-lateral h2 {
+    color: white;
+}
+
+.barra-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+main {
+    margin-left: 230px;
+}
+
 @media (max-width: 700px) {
     .layout {
         grid-template-columns: 1fr;
     }
 
+    .barra-lateral {
+        position: static;
+        width: 100%;
+    }
+
+    main {
+        margin-left: 0;
+    }
+    
     nav {
     flex-wrap: wrap;
     gap: 15px;
