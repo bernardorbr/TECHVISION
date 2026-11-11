@@ -1,7 +1,9 @@
-*{
+/* Faz o tamanho dos elementos incluir bordas e espaçamentos */
+* {
     box-sizing: border-box;
 }
 
+/* Estilo padrão de toda a página */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,14 +11,21 @@ body {
     color: #222;
 }
 
+
+/* -------------------------
+      CABEÇALHO E MENU
+   ------------------------- */
+
+/* Cabeçalho principal do site */
 header {
     background-color: #04248d;
     color: white;
-    text-align: center; 
+    text-align: center;
     padding: 25px;
     position: relative;
 }
 
+/* Menu de navegação */
 nav {
     background-color: #2563eb;
     padding: 15px;
@@ -25,100 +34,19 @@ nav {
     gap: 30px;
 }
 
-
+/* Links do menu */
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Efeito ao passar o mouse nos links */
 nav a:hover {
     text-decoration: underline;
 }
 
-.layout {
-    display:grid;
-    grid-template-columns: 220px 1fr;
-    gap: 20px;
-    padding: 20px;
-    align-items: start;
-}
-
-aside {
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid #add;
-}
-
-aside h2 {
-    color: #172554
-}
-
-aside a {
-    display: block;
-    margin: 12px 0;
-    color: #2563eb;
-    text-decoration: none;
-}
-
-main {
-    background-color: white;
-    padding: 25px;
-    border-radius: 8px;
-    min-width: 0;
-}
-
-section {
-    margin-bottom: 25px;
-}
- 
-h2 {
-    color: #172554;
-}
-
-hr {
-  border: none;
-  border-top: #172554;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left
-}
-
-th {
-    background-color: #172554;
-    color: white;
-}
-
-td img {
-    width: 90px;
-    max-width: 90%;
-    height: auto;
-    justify-content: center;
-}
-
-footer {
-    background-color: #172554;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
-    color: white;
-    margin: 0 10px;
-}
-
+/* Logo posicionada no cabeçalho */
 .logo {
     position: absolute;
     top: 10px;
@@ -128,19 +56,115 @@ footer a {
     object-fit: contain;
 }
 
-.servico {
-        background-color: #f2f4f8;
+
+/* -------------------------
+   ESTRUTURA DA PÁGINA
+------------------------- */
+
+/* Organização das áreas com Grid */
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
     padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #2563eb;
-    border-radius: 8px;
+    align-items: start;
 }
 
-.servico h2 {
+/* Barra lateral padrão (aside) */
+aside {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #add;
+}
+
+/* Título da barra lateral */
+aside h2 {
     color: #172554;
-    margin-top: 0;
 }
 
+/* Links dentro do aside */
+aside a {
+    display: block;
+    margin: 12px 0;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Área principal de conteúdo */
+main {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    min-width: 0;
+    margin-left: 230px;
+}
+
+/* Espaçamento entre seções */
+section {
+    margin-bottom: 25px;
+}
+
+/* Estilo padrão dos títulos h2 */
+h2 {
+    color: #172554;
+}
+
+/* Linha horizontal */
+hr {
+    border: none;
+    border-top: #172554;
+}
+
+/* Rodapé do site */
+footer {
+    background-color: #172554;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Links do rodapé */
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+
+/* -------------------------
+          TABELAS
+   ------------------------- */
+
+/* Configuração geral da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Células da tabela */
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Cabeçalho padrão da tabela */
+th {
+    background-color: #172554;
+    color: white;
+}
+
+/* Imagens inseridas nas células */
+td img {
+    width: 90px;
+    max-width: 90%;
+    height: auto;
+    justify-content: center;
+}
+
+/* Ajustes específicos das tabelas dentro do main */
 main th,
 main td {
     padding: 14px;
@@ -148,15 +172,45 @@ main td {
     text-align: left;
 }
 
+/* Cabeçalho específico das tabelas dentro do main */
 main th {
     background-color: #04248d;
     color: white;
 }
 
+/* Regra original para as linhas do corpo da tabela */
 main tbody tr:nth-child {
     background-origin: #f2f4f8;
 }
 
+/* Efeito ao passar o mouse nas linhas da tabela */
+main table tbody tr:hover {
+    background-color: #dbeafe;
+    transition: 0.3s;
+}
+
+
+/* -------------------------
+        CARDS DE CONTEÚDO
+   (serviços, projetos, parcerias e informações)
+   ------------------------- */
+
+/* Card de serviços */
+.servico {
+    background-color: #f2f4f8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+}
+
+/* Título do card de serviços */
+.servico h2 {
+    color: #172554;
+    margin-top: 0;
+}
+
+/* Card de projetos */
 .projeto {
     background-color: #f2f4f8;
     padding: 20px;
@@ -165,12 +219,14 @@ main tbody tr:nth-child {
     border-radius: 8px;
 }
 
+/* Título do card de projetos */
 .projeto h2 {
     color: #172554;
     margin: 0;
 }
 
-.parceria{
+/* Card de parcerias */
+.parceria {
     background-color: #f2f4f8;
     padding: 20px;
     margin-bottom: 20px;
@@ -178,16 +234,13 @@ main tbody tr:nth-child {
     border-radius: 8px;
 }
 
+/* Título do card de parcerias */
 .parceria h2 {
     color: #172554;
     margin-top: 0;
 }
 
-main table tbody tr:hover {
-    background-color: #dbeafe;
-    transition: 0.3s;
-}
-
+/* Card de informações */
 .informacao {
     background-color: #f2f4f8;
     padding: 20px;
@@ -196,39 +249,36 @@ main table tbody tr:hover {
     border-radius: 8px;
 }
 
+/* Título do card de informações */
 .informacao h2 {
     color: #172554;
     margin-top: 0;
 }
 
-.informacao {
-    background-color: #f2f4f8;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #2563eb;
-    border-radius: 8px;
-}
 
-.informacao h2 {
-    color: #172554;
-    margin-top: 0;
-}
+/* -------------------------
+     FORMULÁRIOS E BOTÕES
+   ------------------------- */
 
+/* Espaçamento acima do formulário */
 form {
     margin-top: 20px;
 }
 
+/* Caixa que agrupa os campos do formulário */
 fieldset {
     border: 2px solid #2563eb;
     border-radius: 10px;
     padding: 20px;
 }
 
+/* Legenda do fieldset */
 legend {
     color: #172554;
     font-weight: bold;
 }
 
+/* Campos de entrada */
 input {
     background-color: #e5e6eb;
     color: white;
@@ -238,8 +288,9 @@ input {
     font-family: Arial, sans-serif;
 }
 
+/* Botões */
 button {
-    background-color: #2563eb; 
+    background-color: #2563eb;
     color: white;
     padding: 10px 18px;
     border: none;
@@ -248,26 +299,33 @@ button {
     margin-right: 8px;
 }
 
+/* Efeito ao passar o mouse no botão */
 button:hover {
     background-color: #172554;
 }
 
+
+/* -------------------------
+      BARRA LATERAL FIXA
+   ------------------------- */
+
+/* Barra lateral que fica fixa na tela */
 .barra-lateral {
     position: fixed;
     top: 190px;
     left: 10px;
-
     width: 200px;
     background-color: #04248d;
-
     padding: 20px;
     border-radius: 10px;
 }
 
+/* Título da barra lateral fixa */
 .barra-lateral h2 {
     color: white;
 }
 
+/* Links da barra lateral fixa */
 .barra-lateral a {
     display: block;
     color: white;
@@ -275,34 +333,165 @@ button:hover {
     margin: 15px 0;
 }
 
-main {
-    margin-left: 230px;
+
+/* -------------------------
+     AGRUPAMENTO DE IMAGENS
+   ------------------------- */
+
+/* Centraliza a área de camadas de fotos */
+#camadas {
+    text-align: center;
 }
 
+/* Área que contém as fotos sobrepostas */
+.agrupamento {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+/* Estilo comum para cada foto */
+.foto {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 3px solid #0066cc;
+    border-radius: 10px;
+}
+
+/* Imagem dentro de cada camada */
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Posicionamento e ordem da primeira foto */
+.foto1 {
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+/* Posicionamento e ordem da segunda foto */
+.foto2 {
+    top: 15px;
+    left: 15px;
+    z-index: 6;
+}
+
+/* Posicionamento e ordem da terceira foto */
+.foto3 {
+    top: 30px;
+    left: 30px;
+    z-index: 5;
+}
+
+/* Posicionamento e ordem da quarta foto */
+.foto4 {
+    top: 45px;
+    left: 45px;
+    z-index: 4;
+}
+
+/* Posicionamento e ordem da quinta foto */
+.foto5 {
+    top: 60px;
+    left: 60px;
+    z-index: 3;
+}
+
+/* Posicionamento e ordem da sexta foto */
+.foto6 {
+    top: 75px;
+    left: 75px;
+    z-index: 2;
+}
+
+/* Posicionamento e ordem da sétima foto */
+.foto7 {
+    top: 90px;
+    left: 90px;
+    z-index: 1;
+}
+
+/* Esconde a foto selecionada pelo link/âncora */
+.foto:target {
+    display: none;
+}
+
+/* ------------------------*/ 
+     /*Menu Drop-Down*/
+/*-------------------------*/
+.dropdown {
+    position: relative;
+}
+
+/* Estilo do menu suspenso*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #0b2f87;
+    min-width: 160px;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Estilo dos links*/
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse*/
+.dropdown-menu a:hover {
+    background-color: #0066cc;
+}
+
+/* Mostrar o menu ao passar o mouse*/
+.dropdown-menu .dropdown-menu {
+    display: block;
+}
+
+/* -------------------------
+        RESPONSIVIDADE
+   Ajustes para telas menores que 700px
+   ------------------------- */
+
 @media (max-width: 700px) {
+
+    /* Layout passa a ter apenas uma coluna */
     .layout {
         grid-template-columns: 1fr;
     }
 
+    /* Barra lateral deixa de ser fixa no celular */
     .barra-lateral {
         position: static;
         width: 100%;
     }
 
+    /* Remove o espaço lateral do conteúdo principal */
     main {
         margin-left: 0;
+        overflow-x: auto;
     }
-    
+
+    /* Menu pode quebrar linha em telas pequenas */
     nav {
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 12px;
-}
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px;
+    }
 
-    main {
-    overflow-x: auto;
-}
-
+    /* Logo fica no fluxo normal da página e menor */
     .logo {
         position: static;
         width: 80px;
