@@ -333,93 +333,76 @@ button:hover {
     margin: 15px 0;
 }
 
-
-/* -------------------------
-     AGRUPAMENTO DE IMAGENS
-   ------------------------- */
-
-/* Centraliza a área de camadas de fotos */
-#camadas {
-    text-align: center;
-}
-
-/* Área que contém as fotos sobrepostas */
-.agrupamento {
+/* Agrupamento das imagens*/
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 50px auto;
+    margin-bottom: 150px;
 }
 
-/* Estilo comum para cada foto */
-.foto {
+/*Imagnes sobreposta*/
+.galeria label {
     position: absolute;
+}
+
+/*Configuração das imagens*/
+.galeria img {
     width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border: 3px solid #0066cc;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid white;
     border-radius: 10px;
 }
 
-/* Imagem dentro de cada camada */
-.foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Posicionamento das fotos*/
+#foto1 + label {
+    transform: rotate(-15deg) translate(-60px);
 }
 
-/* Posicionamento e ordem da primeira foto */
-.foto1 {
-    top: 0;
-    left: 0;
-    z-index: 7;
+#foto2 + label {
+    transform: rotate(-10deg) translateX(-40px);
 }
 
-/* Posicionamento e ordem da segunda foto */
-.foto2 {
-    top: 15px;
-    left: 15px;
-    z-index: 6;
+#foto3 + label {
+    transform: rotate(-5deg) translateX(-20px);
 }
 
-/* Posicionamento e ordem da terceira foto */
-.foto3 {
-    top: 30px;
-    left: 30px;
-    z-index: 5;
+#foto4 + label {
+    transform: rotate(0deg);
 }
 
-/* Posicionamento e ordem da quarta foto */
-.foto4 {
-    top: 45px;
-    left: 45px;
-    z-index: 4;
+#foto5 + label {
+    transform: rotate(5deg) translateX(20px);
 }
 
-/* Posicionamento e ordem da quinta foto */
-.foto5 {
-    top: 60px;
-    left: 60px;
-    z-index: 3;
+#foto6 + label {
+    transform: rotate(10deg) translateX(40px);
 }
 
-/* Posicionamento e ordem da sexta foto */
-.foto6 {
-    top: 75px;
-    left: 75px;
-    z-index: 2;
+#foto7 + label {
+    transform: rotate(15deg) translateX(60px);
 }
 
-/* Posicionamento e ordem da sétima foto */
-.foto7 {
-    top: 90px;
-    left: 90px;
-    z-index: 1;
-}
 
-/* Esconde a foto selecionada pelo link/âncora */
-.foto:target {
+/*Fazer a imagem sumir ao clicar*/
+.galeria input:checked + label img {
     display: none;
+}
+
+
+/* Esconder os checkbox */
+.galeria input[type="checkbox"] {
+    display: none;
+}
+
+#galeria button,
+button[type="resete"] {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
 }
 
 /* ------------------------*/ 
@@ -456,7 +439,7 @@ button:hover {
 }
 
 /* Mostrar o menu ao passar o mouse*/
-.dropdown-menu .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
